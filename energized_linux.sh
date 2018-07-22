@@ -24,8 +24,8 @@ if [ ! -d /EnergizedProtection ]; then
 fi
 
 # Versioning
-version=`echo -e $Y"3.3"$N`
-released=`echo -e $G"Jul 21, 2018"$N`
+version=`echo -e $Y"3.5"$N`
+released=`echo -e $G"Jul 22, 2018"$N`
 saythanks='https://saythanks.io/to/AdroitAdorKhan' > /dev/null 2>&1
 
 # Start Echos
@@ -388,7 +388,7 @@ sleep 0.1
 					grep -Fvf $WHITELIST $HOST > $TEMP
 					mv $TEMP $HOST
 					sleep 0.5
-					grep -Fvf $WHITELIST $HOST > $TEMP
+					grep -vxf $WHITELIST $HOST > $TEMP
 					mv $TEMP $HOST
 					sleep 1
 					echo -e $G'[+] Done'$N
@@ -703,7 +703,7 @@ EOF
 		echo "\n\033[32;5;7m[+] Done Applying!\033[0m"
 		sleep 1
 		echo -e $Y"$divider"$N
-		grep "Updated" $TREADME > $FILTER
+		grep "Version Code" $TREADME > $FILTER
 		sleep 0.5
 		echo -e $W'[+] Returning...'$N
 		sleep 0.3
