@@ -548,10 +548,10 @@ sleep 0.1
 		echo "Clean your current hosts to default."
 		echo -e $Y"$divider"$N
 		echo ""
-		rm -rf /sbin/.core/img/.core/hosts
+		rm -rf /etc/hosts
 		echo "[+] Clearing Hosts File..."
 		sleep 0.3
-		cat >> /sbin/.core/img/.core/hosts <<EOF
+		cat >> /etc/hosts <<EOF
 # WELCOME TO THE HOSTS FILE !!
 # A plain text file that maps hostnames to IP addresses.
 # Used for attacks or pranks, or to simply and freely control access to websites and network traffic.
