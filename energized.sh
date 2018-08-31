@@ -74,7 +74,7 @@ echo -e $P"WE MAY ASK YOU FOR YOUR $N'sudo'$P PASSWORD"$N
 echo -e $P"TO ACCESS AND MODIFY THE $N'hosts'$P FILE"$N
 echo -e $P"DON'T WORRY !! , WE WON'T TOUCH ANYTHING ELSE !"$N
 echo -e "$divider"
-sleep 8
+sleep 10
 # Check Energized Directory
 clear
 echo -e "[+] Checking Energized Directory."; sleep 0.1; clear
@@ -706,15 +706,11 @@ sleep 0.1
 		clear
 		reset
 		;;
-		i) if [ "$INPUT" -eq i ]; then
-		     xdg-open "https://nayemador.com/energized"
-		   fi
+		i) xdg-open https://nayemador.com/energized
 		;;
-		in) if [ "$INPUT" -eq i ]; then
-		     xdg-open "https://nayemador.com/energized/instructions"
-		   fi
+		in) xdg-open https://nayemador.com/energized/instructions
 		;;
-		thanks|thx|thnx|thax|thank|thanku|thankyou) xdg-open "$saythanks"
+		thanks|thx|thnx|thax|thank|thanku|thankyou) xdg-open $saythanks
 		;;
 		c) clear
 		echo -e $Y"$divider"$N
