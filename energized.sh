@@ -17,6 +17,7 @@ N='\e[0m' > /dev/null 2>&1; # Null
 
 # Define Energized Protection directory
 USER=`whoami`
+hostname=`hostname`
 DIRECTORY=/home/$USER/EnergizedProtection
 # Divider
 divider="-------------------------------------------------"
@@ -713,7 +714,6 @@ sleep 0.1
 		thanks|thx|thnx|thax|thank|thanku|thankyou) xdg-open $saythanks
 		;;
 		c) clear
-        hostname=`hostname`
 		echo -e $Y"$divider"$N
 		echo -e $Y'[+] CLEAN HOSTS'$N
 		sleep 0.1
@@ -904,7 +904,7 @@ EOF"
 		echo -e ""
 		sudo wget --no-check-certificate -O $HOST https://raw.githubusercontent.com/EnergizedProtection/block/$DIR
 		echo -e "\n\033[32;5;7m[+] Done Applying!\033[0m"
-        sudo sed -i "127.0.0.1 $hostname" $HOST
+        sudo sed -i "53i 127.0.0.1 $hostname" $HOST
 		sleep 1
 		echo -e $Y"$divider"$N
 		grep "Version Code" $TREADME > $FILTER
