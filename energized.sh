@@ -713,6 +713,7 @@ sleep 0.1
 		thanks|thx|thnx|thax|thank|thanku|thankyou) xdg-open $saythanks
 		;;
 		c) clear
+        hostname=`hostname`
 		echo -e $Y"$divider"$N
 		echo -e $Y'[+] CLEAN HOSTS'$N
 		sleep 0.1
@@ -728,9 +729,10 @@ sleep 0.1
 		touch $DFILTER
 		echo -e "[+] Clearing Hosts File..."
 		sleep 0.3
-		sudo cat >> $HOST <<EOF
+		sudo bash -c "cat >> $HOST <<EOF
 127.0.0.1 localhost
-EOF
+127.0.0.1 $hostname
+EOF"
         echo -e "[+] Done Clearing Hosts!"
         echo -e "[+] Returning..."
         sleep 2
@@ -902,6 +904,7 @@ EOF
 		echo -e ""
 		sudo wget --no-check-certificate -O $HOST https://raw.githubusercontent.com/EnergizedProtection/block/$DIR
 		echo -e "\n\033[32;5;7m[+] Done Applying!\033[0m"
+        sudo sed -i "127.0.0.1 $hostname" $HOST
 		sleep 1
 		echo -e $Y"$divider"$N
 		grep "Version Code" $TREADME > $FILTER
