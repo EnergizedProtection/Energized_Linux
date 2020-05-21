@@ -429,14 +429,14 @@ sleep 0.1
 	fi
 	case "$INPUT" in
 	    # Spark Protection
-		1|spark|Spark|SPARK) DIR="master/spark/formats/hosts.gz"
+		1|spark|Spark|SPARK) DIR="spark"
 		clear
 		echo -e $Y"$divider"$N
 		sleep 0.1
 		echo -e $Y'[+] Applying Energized Spark Protection'$N
 		;;
 		# Blu Go Protection
-		2|blugo|BluGo|bluGo|BLUGO) DIR="master/bluGo/formats/hosts.gz"
+		2|blugo|BluGo|bluGo|BLUGO) DIR="bluGo"
 		clear
 		echo -e $Y"$divider"$N
 		sleep 0.1
@@ -444,7 +444,7 @@ sleep 0.1
 		echo -e $Y"$divider"$N
 		;;
 		# Blu Protection
-		3|blu|Blu|BLU) DIR="master/blu/formats/hosts.gz"
+		3|blu|Blu|BLU) DIR="blu"
 		clear
 		echo -e $Y"$divider"$N
 		sleep 0.1
@@ -470,7 +470,7 @@ sleep 0.1
 		read answer
 		if [[ "$answer" == "Y" || "$answer" == "y" ]]; then
 		  echo "[+] Applying Energized Basic..."
-		  DIR="master/basic/formats/hosts.gz"
+		  DIR="basic"
 		  clear
 		  echo -e $Y"$divider"$N
 		  sleep 0.1
@@ -505,7 +505,7 @@ sleep 0.1
 		read answer
 		if [[ "$answer" == "Y" || "$answer" == "y" ]]; then
 		  echo "[+] Applying Energized Ultimate..."
-		  DIR="master/ultimate/formats/hosts.gz"
+		  DIR="ultimate"
 		  clear
 		  echo -e $Y"$divider"$N
 		  sleep 0.1
@@ -540,7 +540,7 @@ sleep 0.1
 		read answer
 		if [[ "$answer" == "Y" || "$answer" == "y" ]]; then
 		  echo "[+] Applying Energized Unified..."
-		  DIR="master/unified/formats/hosts.gz"
+		  DIR="unified"
 		  clear
 		  echo -e $Y"$divider"$N
 		  sleep 0.1
@@ -584,7 +584,7 @@ sleep 0.1
 		  echo "Adds Porn Blocking Pack to current hosts."
 		  echo -e $Y"$divider"$N
 		  echo ""
-		  wget --no-check-certificate -O $SHOST https://raw.githubusercontent.com/EnergizedProtection/block/master/porn/formats/hosts.gz
+		  wget --no-check-certificate -O $SHOST https://block.energized.pro/porn/formats/hosts.gz
 		  echo "[+] Applying Porn Hosts to current hosts."
 		  gzip -d -c $SHOST > $PTEMP
 		  mv $HOST $TEMP
@@ -727,7 +727,7 @@ sleep 0.1
 		  sleep 0.1
 		  echo -e $Y"$divider"$N
 		  echo ''
-		  wget --no-check-certificate -O $SHOST https://raw.githubusercontent.com/EnergizedProtection/block/master/$autopack/formats/hosts.gz
+		  wget --no-check-certificate -O $SHOST https://block.energized.pro/$autopack/formats/hosts.gz
 		  gzip -d -c $SHOST > $HOST
 		  rm -f $SHOST
 		  echo -e $G"[+] Done Applying!"$N
@@ -1437,7 +1437,7 @@ sleep 0.1
 	esac
 	if [ $DIR ]; then
 		echo ""
-		wget --no-check-certificate -O $SHOST https://raw.githubusercontent.com/EnergizedProtection/block/$DIR
+		wget --no-check-certificate -O $SHOST https://block.energized.pro/$DIR/formats/hosts.gz
 		gzip -d -c $SHOST > $HOST
 		rm -f $SHOST
 		echo -e $G'[+] Done Applying!'$N
