@@ -614,7 +614,7 @@ sleep 0.1
 		echo "Adds Porn Lite Blocking Pack to current hosts."
 		echo -e $Y"$divider"$N
 		echo ""
-		wget --no-check-certificate -O $SHOST https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/porn-lite/formats/hosts.gz
+		wget --no-check-certificate -O $SHOST https://block.energized.pro/extensions/porn-lite/formats/hosts.gz
 		echo "[+] Applying Porn Lite Hosts to current hosts."
 		gzip -d -c $SHOST > $PTEMP
         mv $HOST $TEMP
@@ -636,7 +636,7 @@ sleep 0.1
 		echo "Adds Regional Blocking Pack to current hosts."
 		echo -e $Y"$divider"$N
 		echo ""
-		wget --no-check-certificate -O $SHOST https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/regional/formats/hosts.gz
+		wget --no-check-certificate -O $SHOST https://block.energized.pro/extensions/regional/formats/hosts.gz
 		echo "[+] Applying Regional Hosts to current hosts."
 		gzip -d -c $SHOST > $STEMP
         mv $HOST $TEMP
@@ -657,7 +657,7 @@ sleep 0.1
 		echo "Adds Social Blocking Pack to current hosts."
 		echo -e $Y"$divider"$N
 		echo ""
-		wget --no-check-certificate -O $SHOST https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/social/formats/hosts.gz
+		wget --no-check-certificate -O $SHOST https://block.energized.pro/extensions/social/formats/hosts.gz
 		echo "[+] Applying Social Hosts to current hosts."
 		gzip -d -c $SHOST > $STEMP
         mv $HOST $TEMP
@@ -695,7 +695,7 @@ sleep 0.1
 		  echo "Adds Xtreme Blocking Pack to current hosts."
 		  echo -e $Y"$divider"$N
 		  echo ""
-		  wget --no-check-certificate -O $SHOST https://raw.githubusercontent.com/EnergizedProtection/block/master/extensions/xtreme/formats/hosts.gz
+		  wget --no-check-certificate -O $SHOST https://block.energized.pro/extensions/xtreme/formats/hosts.gz
 		  echo "[+] Applying Xtreme Hosts to current hosts."
 		  gzip -d -c $SHOST > $PTEMP
 		  mv $HOST $TEMP
