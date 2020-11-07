@@ -751,7 +751,7 @@ sleep 0.1
 				sleep 2
 		    else
 				if [ -f "$HOST" ]; then
-				 if [ ! -s $WHITELIST ]; then
+				 if [ -s $WHITELIST ]; then
 					echo -e $G'[+] Whitelist Found!'$N
 					echo -e $W'[+] Applying Whitelist'$N
 					sleep 0.3
