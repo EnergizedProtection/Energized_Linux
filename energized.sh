@@ -1348,6 +1348,7 @@ sleep 0.1
 		  sed -e 's/[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}/'"${ip}"'/g' $TEMP > $STEMP
 		  awk '!a[$0]++' $STEMP > $TEMP
 		  cat $PTEMP $TEMP > $HOST
+		  chmod 644 $HOST
 		  rm -f $TEMP $STEMP $PTEMP $LTEMP
 		  echo -e $W'[+] Done'$N
 		  echo -e $W'[+] Make sure to reboot once after applying.'$N
